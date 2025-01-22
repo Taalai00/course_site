@@ -44,6 +44,17 @@ INSTALLED_APPS = [
     'rest_framework',
     'course_app',
 ]
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
+'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'course_app',
+    'DESCRIPTION': 'Документация API',
+    'VERSION': '23.3.1',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

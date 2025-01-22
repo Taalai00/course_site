@@ -41,4 +41,7 @@ urlpatterns = [
 
     path('carts/', CartListAPIView.as_view(), name='cart_list'),
     path('carts/<int:pk>/', CartItemDetailAPiView.as_view(), name='cart_item_detail'),
+
+    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
 ]
